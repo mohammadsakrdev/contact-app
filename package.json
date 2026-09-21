@@ -4,7 +4,9 @@
   "description": "contact-app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./src/**/*.test.js",
+    "start": "set NODE_ENV=prod&& node app.js",
+    "start-dev": "set NODE_ENV=dev&& nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,22 @@
   "bugs": {
     "url": "https://github.com/mohammadsakrdev/contact-app/issues"
   },
-  "homepage": "https://github.com/mohammadsakrdev/contact-app#readme"
+  "homepage": "https://github.com/mohammadsakrdev/contact-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "glob": "^7.1.4",
+    "helmet": "^3.21.1",
+    "joi": "^14.3.1",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7",
+    "pouchdb": "^7.1.1",
+    "pouchdb-find": "^7.1.1",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
 }
